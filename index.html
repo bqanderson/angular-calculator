@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html ng-app="CaculatorApp">
+  <head>
+    <meta charset="utf-8">
+    <script src="angular.min.js"></script>
+    <script src="client.js"></script>
+    <link href='https://fonts.googleapis.com/css?family=Ubuntu:400,300,700' rel='stylesheet' type='text/css'>
+    <link rel="stylesheet" href="stylesheet.css">
+    <title>AngularJS Caculator</title>
+  </head>
+
+  <body ng-controller="MainController">
+    <p><input type="text" value={{txt}} /></p>
+    <button ng-click="addNumber('7')">7</button>
+    <button ng-click="addNumber('8')">8</button>
+    <button ng-click="addNumber('9')">9</button>
+    <button class="double" ng-click="numbersRight = []; numbersLeft = []; txt='';">C/CA</button><br>
+
+    <button ng-click="addNumber('4')">4</button>
+    <button ng-click="addNumber('5')">5</button>
+    <button ng-click="addNumber('6')">6</button>
+    <button ng-click="addOperator('+')">+</button>
+    <button ng-click="addOperator('-')">-</button><br>
+
+    <button ng-click="addNumber('1')">1</button>
+    <button ng-click="addNumber('2')">2</button>
+    <button ng-click="addNumber('3')">3</button>
+    <button ng-click="addOperator('*')">*</button>
+    <button ng-click="addOperator('/')">/</button><br>
+
+    <button ng-click="addNumber('.')">.</button>
+    <button ng-click="addNumber('0')">0</button>
+    <button ng-click="calculate()">=</button>
+  </body>
+</html>
